@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Table({ prod }) {
   return (
-    <div className="overflow-x-auto grid">
+    <div className="overflow-x-auto grid p-4">
       <table className="table table-xs text-sm   ">
         <thead className=" ">
           <tr className=" ">
