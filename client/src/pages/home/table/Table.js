@@ -1,27 +1,35 @@
 import React from "react";
 
-export default function Table() {
+export default function Table({ prod }) {
   return (
-    <div className="">
-      <table>
-        <thead className="  ">
-          <tr className="text-xl ">
-            <th className="px-4 py-3">id</th>
-            <th className="px-4 py-3">fullname</th>
-            <th className="px-4 py-3">email</th>
-            <th className="px-4 py-3">gender</th>
-            <th className="px-4 py-3">status</th>
-            <th className="px-4 py-3">profile</th>
-            <th className="px-4 py-3">action</th>
+    <div className="overflow-x-auto grid">
+      <table className="table table-xs text-sm   ">
+        <thead className=" ">
+          <tr className=" ">
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Company</th>
+            <th>email</th>
+            <th>phone</th>
+            <th>address</th>
+            <th>friends</th>
           </tr>
         </thead>
-        <tbody className="text-xl font-semibold">
-          <tr>
-            <td className="px-4 py-3">1</td>
-            <td className="px-4 py-3">joshim uddin</td>
-            <td className="px-4 py-3">md.joshim uddin075@gmal.com</td>
-            <td className="px-4 py-3">Male</td>
-            <td className="px-4 py-3">Active</td>
+        <tbody>
+          <tr className="  ">
+            <td>{prod.name}</td>
+            <td>{prod.age}</td>
+            <td>{prod.gender}</td>
+            <td>{prod.company}</td>
+            <td>{prod.email}</td>
+            <td>{prod.phone}</td>
+            <td>{prod.address}</td>
+            <td>
+              {prod.friends.map((data) => {
+                return <div key={data.id}>{<h1>{data.name}</h1>}</div>;
+              })}
+            </td>
           </tr>
         </tbody>
       </table>
