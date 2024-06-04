@@ -3,6 +3,7 @@ import Search from "./Search/Search";
 import Filter from "./filter/Filter";
 import Table from "./table/Table";
 import { DataState } from "../../component/context/Contextprovider";
+import Pagination from "./Pagination";
 //import { adddata } from "../../component/context/Contextprovider";
 
 export default function Home() {
@@ -45,6 +46,8 @@ export default function Home() {
           ))}
         </div>
       </div>
+
+      <Pagination />
     </div>
   );
 }
