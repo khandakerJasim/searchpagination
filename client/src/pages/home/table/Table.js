@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Table() {
   return (
-    <div className="  mt-10 md:mt-[100px] h-auto md:justify-center flex m-auto">
+    <div className="">
       <table>
-        <thead className="bg-black text-gray-200  ">
+        <thead className="  ">
           <tr className="text-xl ">
             <th className="px-4 py-3">id</th>
             <th className="px-4 py-3">fullname</th>
